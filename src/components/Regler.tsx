@@ -16,13 +16,11 @@ const Regler: FC = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      {valgtRunde !== 0 &&
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <button className='toggleKnapp' onClick={gåTilForrigeRunde}>
-            ←
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <button className='toggleKnapp' onClick={gåTilForrigeRunde} disabled={valgtRunde === 0}>
+          ←
           </button>
-        </div>
-      }
+      </div>
       <div style={{ width: '80%' }}>
         <h2 style={{ textAlign: 'center' }}>Runde {regel.rundeNummer}</h2>
         <ul className='regelSettListe'>
@@ -37,13 +35,11 @@ const Regler: FC = () => {
           </li>
         </ul>
       </div>
-      {valgtRunde !== 6 &&
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <button className='toggleKnapp' onClick={gåTilNesteRunde}>
-            →
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <button className='toggleKnapp' onClick={gåTilNesteRunde} disabled={valgtRunde === 6}>
+          →
           </button>
-        </div>
-      }
+      </div>
     </div>
   )
 }
