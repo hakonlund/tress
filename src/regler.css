@@ -1,0 +1,23 @@
+.regelSettListe {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+
+.regelSettListe li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regelSettListe p {
+  padding: 0 0 0 10px;
+}
+
+.toggleKnapp {
+  height: 100%;
+  font-size: 30px;
+  outline: none;
+  border: 0;
+  background: transparent;
+}

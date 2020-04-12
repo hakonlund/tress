@@ -1,9 +1,12 @@
-import React, { FC } from "react"
+import React, { FC } from 'react'
+import Regler from './Regler'
+import '../main.css'
 
 const App: FC = () => {
   return (
     <div>
-      <h1>Velkommen til tress-app</h1>
+      <h1>Rekkefølge i tress</h1>
+      <Regler />
     </div>
   )
 }
