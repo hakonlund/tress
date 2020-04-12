@@ -1,10 +1,9 @@
 import React, { FC } from "react"
 
-const App: FC<{ color: string }> = ({ color }) => {
+const App: FC = () => {
   return (
     <div>
-      <h1>Welcome to React with Typescript</h1>
-      <p>The color of this page is: {color}</p>
+      <h1>Velkommen til tress-app</h1>
     </div>
   )
 }
