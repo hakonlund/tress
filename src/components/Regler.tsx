@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { Swipeable } from 'react-swipeable'
 import { RegelSett } from './RegelSett'
 import '../regler.css'
 
@@ -15,11 +16,17 @@ const Regler: FC = () => {
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Swipeable
+      onSwipedLeft={() => gåTilForrigeRunde()}
+      onSwipedRight={() => gåTilNesteRunde()}
+      style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <button className='toggleKnapp' onClick={gåTilForrigeRunde} disabled={valgtRunde === 0}>
-          ←
-          </button>
+        <i
+          className='material-icons'
+          onClick={gåTilForrigeRunde}
+          style={{ fontSize: '48px', color: valgtRunde === 0 ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 1)' }}>
+          navigate_before
+        </i>
       </div>
       <div style={{ width: '80%' }}>
         <h2 style={{ textAlign: 'center' }}>Runde {regel.rundeNummer}</h2>
@@ -36,11 +43,14 @@ const Regler: FC = () => {
         </ul>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <button className='toggleKnapp' onClick={gåTilNesteRunde} disabled={valgtRunde === 6}>
-          →
-          </button>
+        <i
+          className='material-icons'
+          onClick={gåTilNesteRunde}
+          style={{ fontSize: '48px', color: valgtRunde === 6 ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 1)' }}>
+          navigate_next
+        </i>
       </div>
-    </div>
+    </Swipeable>
   )
 }
 
