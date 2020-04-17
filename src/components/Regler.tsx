@@ -17,8 +17,8 @@ const Regler: FC = () => {
 
   return (
     <Swipeable
-      onSwipedLeft={() => gåTilForrigeRunde()}
-      onSwipedRight={() => gåTilNesteRunde()}
+      onSwipedRight={() => gåTilForrigeRunde()}
+      onSwipedLeft={() => gåTilNesteRunde()}
       style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <i
